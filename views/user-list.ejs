@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Soal No.4</title>
+</head>
+<body>
+  <div class="table-data">
+    <h2><marquee behavior="" direction="">Display Data memakai Node.js & MySQL </marquee></h2>
+    <table border="1">
+      <tr>
+        <!--<th>No.</th>-->
+        <th>Nama karyawan</th>
+        <th>Gaji pokok</th>
+      </tr>
+      <% if (userData.length !== 0) { %>
+        <% userData.forEach(function(data, index) { %>
+          <tr>
+            <!--<td><%= index + 1 %></td>-->
+            <td style="text-align: center;"><%= data.nama_karyawan %></td>
+            <td><%= data.gaji_pokok %></td>
+          </tr>
+        <% }); %>
+      <% } else { %>
+        <tr>
+          <td colspan="7">No Data Found</td>
+        </tr>
+      <% } %>
+    </table>
+  </div>
+</body>
+</html>
